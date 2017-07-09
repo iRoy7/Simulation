@@ -84,10 +84,8 @@ void RemoveTree(NODE *n)
 	else
 	{
 		while (h->next != n)
-		{
 			h = h->next;
-			h->next = n->next;
-		}
+		h->next = n->next;
 	}
 }
 
