@@ -6,6 +6,7 @@ typedef struct _dnode
   struct _dnode *prev;
   struct _dnode *next;
 } dnode;
+
 dnode *head = NULL;
 dnode *tail = NULL;
 
