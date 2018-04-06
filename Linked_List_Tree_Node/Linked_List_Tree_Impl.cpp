@@ -20,16 +20,16 @@ int NodeCnt = 0;
 
 ////////////////////////////////////////////////////////
 // Function Declaration
-int AddNode(int id, int pid, int value);
-int GetCurNodeCnt();
-int RemoveNode(int id);
-int GetValueSum(int pid);
-int MoveNode(int id, int pid);
 NODE *GetNode(int id);
+int AddNode(int id, int pid, int value);
+int RemoveNode(int id);
+int MoveNode(int id, int pid);
+int GetValueSum(int pid);
+int GetCurNodeCnt();
 //======================================================
 inline int HASH(int id) { return id % MAX_HASH; }
-int GetCurNodeCnt() { return NodeCnt; }
-int GetValueSum(int id) { NODE *n = GetNode(id);	return n->sum; }
+inline int GetCurNodeCnt() { return NodeCnt; }
+inline int GetValueSum(int id) { NODE *n = GetNode(id);	return n->sum; }
 
 NODE *GetNode(int id)
 {
